@@ -93,28 +93,27 @@ class DashBoardWindow:
             try:
                 self.move_cursor(user_y, user_x - 2)
             except CoordOutOfDeskError:
-                self.console.addstr(1, 0, "Error in left Key")
+                pass
         elif pressed_key == curses.KEY_RIGHT:
             try:
                 self.move_cursor(user_y, user_x + 2)
             except CoordOutOfDeskError:
-                self.console.addstr(1, 0, "Error in KEY_RIGHT")
+                pass
         elif pressed_key == curses.KEY_UP:
             try:
                 self.move_cursor(user_y - 1, user_x)
             except CoordOutOfDeskError:
-                self.console.addstr(1, 0, "Error in KEY_UP")
+                pass
         elif pressed_key == curses.KEY_DOWN:
             try:
                 self.move_cursor(user_y + 1, user_x)
             except CoordOutOfDeskError:
-                self.console.addstr(1, 0, "Error in KEY_DOWN")
+                pass
         elif pressed_key == KEY_SPACE:
             try:
                 cell_was_empty = self.try_to_knock_out_cell(user_y, user_x)
-                self.console.addstr(2, 0, "ENTER PRESSED")
                 self.print_dashboard()
                 self.move_cursor(user_y, user_x)
                 return cell_was_empty
             except CellAlreadyKnockedOutError:
-                self.console.addstr(1, 0, "Error in knocked cell")
+                pass

@@ -101,11 +101,8 @@ def main(console):
 
     # game loop
     while True:
-        console.addstr(0, 0, "  " * 20)
-        console.addstr(0, 0, f"UserDesk -> y:{user_y}, x:{user_x}")
         if player_turn:
             pressed_key = console.getch()
-            console.addstr(3, 0, str(pressed_key))
             user_y, user_x = user_desk.getyx()
 
             cell_was_empty = ai_window.key_handler(user_y, user_x, pressed_key)
