@@ -5,4 +5,4 @@ Python version: python3.10
  
  Use arrows to move at the desk and SPACE to shoot.
 
-![](https://github.com/Nobirs/SeaBattle/blob/master/SeaBattle.gif)
+![](https://github.com/Nobirs/SeaBattle/blob/master/SeaBattle2.gif)
